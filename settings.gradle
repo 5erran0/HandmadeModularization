@@ -1,0 +1,2 @@
+include ':app', ':di', ':featurea', ':featureb', ':domain', ':data', ':navigation'
+rootProject.name='DIWithNoDagger'
