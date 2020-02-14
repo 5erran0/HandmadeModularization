@@ -14,10 +14,7 @@ class MainActivity : AppCompatActivity(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        presenter = MainPresenter(
-            this,
-            ((application as DIApp).componentManager.featureAComponent as FeatureAModule).provideGetSomeValueUseCase()
-        )
+        presenter = ((application as DIApp).componentManager.featureAComponent as FeatureAModule).provideMainPresenter(this)
     }
 
     override fun onStart() {
